@@ -193,19 +193,26 @@ public class ThermalConfig {
         SERVER_CONFIG.push("Devices");
 
         if (getFlag(ID_DEVICE_TREE_EXTRACTOR).getAsBoolean()) {
+            SERVER_CONFIG.push("TreeExtractor");
+
             deviceTreeExtractorTimeConstant = SERVER_CONFIG
                     .comment("This sets the base time constant (in ticks) for the Arboreal Extractor.")
                     .defineInRange("Time Constant", 500, 20, 72000);
+
+            SERVER_CONFIG.pop();
         }
         if (getFlag(ID_DEVICE_FISHER).getAsBoolean()) {
+            SERVER_CONFIG.push("Fisher");
+
             deviceFisherTimeConstant = SERVER_CONFIG
                     .comment("This sets the base time constant (in ticks) for the Aquatic Entangler.")
                     .defineInRange("Time Constant", 4800, 400, 72000);
             deviceFisherTimeReductionWater = SERVER_CONFIG
                     .comment("This sets the time constant reduction (in ticks) per nearby Water source block for the Aquatic Entangler.")
                     .defineInRange("Water Source Time Constant Reduction", 20, 1, 1000);
-        }
 
+            SERVER_CONFIG.pop();
+        }
         SERVER_CONFIG.pop();
     }
 
