@@ -306,6 +306,9 @@
   "item.thermal.signalum_nugget": "Signalum Nugget",
   "item.thermal.signalum_plate": "Signalum Plate",
 
+  "item.thermal.guidebook.name": "Thermalpedia",
+  "item.thermal.guidebook.landing_text": "Welcome to the Thermal Series' guide book! From all of us who worked on it, we hope you enjoy.",
+
   "subtitle.thermal.block.device_water_gen": "Aqueous Accumulator blurbles",
 
   "subtitle.thermal.block.machine_bottler": "Fluid Encapsulator fills",
